@@ -1,0 +1,23 @@
+{
+  "name": "ppt-Blog",
+  "version": "0.0.0",
+  "homepage": "https://github.com/OliDM/ppt-Blog",
+  "authors": [
+    "OliverD <oliver312@gmail.com>"
+  ],
+  "description": "shallow blog application for ppt trial",
+  "main": "main.rb",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.1"
+  }
+}
