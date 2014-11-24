@@ -13,6 +13,7 @@ class Posts
 	property :title, Text, :required => true
 	property :autor, Text
 	property :description, Text
+	property :short_description, Text
 	has_tags_on  :tags 
 end
 
@@ -30,6 +31,7 @@ _posts['posts'].each do |post|
 		:description => post['description']) 
 	p.tag_list = post['tags']
 	puts p.tag_list
+	p.short_description = post['description'].split[1..10].join(" ")
 	p.save
 
 end
