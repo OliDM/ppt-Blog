@@ -38,10 +38,6 @@ end
 
 get '/' do
 
-	@posts = Posts.all.map do|elem| 
-		elem.description.split[1..10].join(" ")
-		elem
-	end
 	erb :index
 end
 
