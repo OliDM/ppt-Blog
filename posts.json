@@ -1,0 +1,25 @@
+{
+  "posts": [
+    {
+    "id": "1",
+    "title": "My first post",
+    "tags": "cooking, sports",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ornare sapien et mauris euismod, quis aliquet ante laoreet..",
+    "author": "Pixelator"
+    },
+    {
+    "id": "2",
+    "title": "Your second post",
+    "tags": "fitness, recreation",
+    "description": "Morbi est sem, lacinia sit amet justo quis, maximus ullamcorper elit. Praesent in dolor nec sem rhoncus tincidunt nec egestas est.",
+    "author": "Pixelated"
+    },
+    {
+    "id": "3",
+    "title": "Your third post",
+    "tags": "fitness",
+    "description": "Praesent in dolor nec sem rhoncus tincidunt nec egestas est.",
+    "author": "Pixelated"
+    }
+  ]
+}
