@@ -34,7 +34,7 @@ _posts['posts'].each do |post|
 		:description => post['description']) 
 
 	p.short_description = post['description'].split[1..10].join(" ")
-	p.tag_list << post['tags'].split(",")
+	p.tag_list = post['tags'].split(",")
 	p.save
 
 end
