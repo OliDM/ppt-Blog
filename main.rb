@@ -32,6 +32,7 @@ _posts['posts'].each do |post|
 	p.tag_list = post['tags']
 	puts p.tag_list
 	p.short_description = post['description'].split[1..10].join(" ")
+	p.tag_list << post['tags'].split(",")
 	p.save
 
 end
