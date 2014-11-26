@@ -3,6 +3,7 @@ require 'data_mapper'
 require 'json'
 require 'dm-core'
 require 'dm-tags'
+require 'sinatra/partial'
 
 DataMapper.setup :default, 'sqlite3::memory:'
 
@@ -16,6 +17,8 @@ class Posts
 	property :short_description, Text
 	has_tags_on  :tags 
 end
+
+set :partial_template_engine, :erb
 
 DataMapper.finalize.auto_upgrade!
 
