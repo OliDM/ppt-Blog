@@ -41,16 +41,23 @@ end
 
 get '/' do
 
+	@posts = Posts.all 
 	erb :index
 end
 
-get 'tags/:id' do
-	@tag = Note.get params[:id]
-	@title = "The tag you searched for is ##{params[:id]}"
+get '/post/:id' do |id|
+
+	_message ="invalid " unless id.is_a? Numeric
+
+	@post = Posts.get(id)
+	erb :post
+end
+
 get '/tags/:id' do |id|
 
 	param = id
 	@title = "The tag you searched for is #{param}"
 	@posts = Posts.tagged_with(param)
 	erb :tags
+
 end
