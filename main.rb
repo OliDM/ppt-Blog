@@ -11,8 +11,8 @@ class Posts
 	include DataMapper::Resource
 
 	property :id, Serial
-	property :title, Text, :required => true
-	property :autor, Text
+	property :title, Text
+	property :author, Text
 	property :description, Text
 	property :short_description, Text
 	has_tags_on  :tags 
@@ -30,10 +30,9 @@ _posts['posts'].each do |post|
 	p = Posts.create(
 		:id => post['id'],
 		:title => post['title'],
-		:autor => post['autor'],
+		:author => post['author'],
 		:description => post['description']) 
-	p.tag_list = post['tags']
-	puts p.tag_list
+
 	p.short_description = post['description'].split[1..10].join(" ")
 	p.tag_list << post['tags'].split(",")
 	p.save
