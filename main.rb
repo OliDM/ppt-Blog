@@ -48,5 +48,10 @@ end
 get 'tags/:id' do
 	@tag = Note.get params[:id]
 	@title = "The tag you searched for is ##{params[:id]}"
+get '/tags/:id' do |id|
+
+	param = id
+	@title = "The tag you searched for is #{param}"
+	@posts = Posts.tagged_with(param)
 	erb :tags
 end
