@@ -4,7 +4,8 @@
 	<h4 class="blog-post-title"><%= post.title %></h4>
 	<small>
 		<span>Written by:</span>
-		<label class="blog-post-autor"><%= post.author %></label> <br>
+		<label class="blog-post-autor">
+			<a href="/author/<%= post.author %>"><%= post.author %></a> </label> <br>
 	</small>
 	<h6>
 		<% post.tag_list.each do |tag| %>
