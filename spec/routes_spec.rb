@@ -1,9 +1,8 @@
 require File.expand_path '../spec_helper.rb', __FILE__
-require 'debugger'
+
 describe "My Sinatra Application" do
   it "should allow accessing the home page" do
     get '/'
-    debugger
     expect(last_response.ok?).to eq(true)
   end
 
