@@ -1,0 +1,13 @@
+ 
+<div class="blog-post">
+	<% if @posts.nil? %>
+	<p>Nope! we dont know that guy, please come by later to see if we could get ahold of him.
+	</p>
+	<lable>feel free to <a href="/">browse</a> around our archive, might find something of interest.</lable>
+	<% else %>
+
+	<%= partial "short_post", :locals => {:posts => @posts} %>
+
+	<% end %>
+	
+</div><!-- /.blog-post -->

@@ -70,6 +70,14 @@ get '/post/:id' do |id|
 	erb :post
 end
 
+get '/author/:id' do |id|
+
+	@author = id
+	@title = "The author you searched for is '#{@autor}'"
+	@posts = Posts.all(:author => @author)
+	erb :autor
+end
+
 get '/tags/:id' do |id|
 
 	param = id
