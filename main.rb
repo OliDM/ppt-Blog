@@ -80,10 +80,10 @@ end
 
 get '/tags/:id' do |id|
 
-	param = id
-	@title = "The tag you searched for is '#{param}'"
-	@posts = Posts.tagged_with(param)
+	@title = "The tag you searched for is '#{id}'"
+	@posts = Posts.tagged_with(id)
 	erb :tags
+end
 
 get '/about' do
 erb :about
