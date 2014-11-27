@@ -85,5 +85,7 @@ get '/tags/:id' do |id|
 	@posts = Posts.tagged_with(param)
 	erb :tags
 
+get '/about' do
+erb :about
 end
 
