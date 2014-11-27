@@ -12,6 +12,7 @@
 		<b><a href="/tags/<%= tag%>"><%= tag%></a></b>
 		<% end %>
 	</h6>
-	<p><%= post.short_description%></p>
+	<p><%= post.short_description%> 
+		<br> <a href="/post/<%= post.id%>"> read more..</a></p>
 </div><!-- /.blog-post -->
 <% end %>
