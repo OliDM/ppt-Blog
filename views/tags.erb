@@ -1,13 +1,7 @@
 <h1><%= @title %></h1>
-<% @posts.each do |post| %>
-<div class="blog-post">
-  <h2 class="blog-post-title"><%= post.title %></h2>
+<% if @posts.nil? || @posts.any? == false %>
 
-  <ul>
-  	<% post.tag_list.collect do |tag| %>
-  	<li><%= tag%></li>
-  	<% end %>
-  </ul>
-  <p><%= post.short_description%></p>
-          </div><!-- /.blog-post -->
+	<p>There appear to be no posts with that tag right now, please come by and check later.</p>    
+    <% else %>
+    <%= partial "short_post", :locals => {:posts => @posts} %>
 <% end %>
