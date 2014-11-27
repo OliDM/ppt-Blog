@@ -4,6 +4,7 @@ require 'json'
 require 'dm-core'
 require 'dm-tags'
 require 'sinatra/partial'
+require 'debugger'
 
 DataMapper.setup :default, 'sqlite3::memory:'
 
@@ -36,6 +37,7 @@ _posts['posts'].each do |post|
 	p.short_description = post['description'].split[1..10].join(" ")
 	p.tag_list = post['tags'].split(",")
 	p.save
+end
 def Get_Tags
 	tags = {}
 	Posts.all.each do |p|
