@@ -1,17 +1,23 @@
  
 <div class="blog-post">
 	<% if @post.nil? %>
-		<p>We're sorry to inform you that we don't have that post available right now... but some day we might!!
-		</p>
-		<labl>feel free to <a href="/">browse</a> around our archive, might find something of interest.</labl>
+	<p>We're sorry to inform you that we don't have that post available right now... but some day we might!!
+	</p>
+	<labl>feel free to <a href="/">browse</a> around our archive, might find something of interest.</labl>
 	<% else %>
-<h2 class="blog-post-title"><%= @post.title %></h2>
-	<ul>
-		<% @post.tag_list.collect do |tag| %>
-		<li><%= tag%></li>
+	<h2 class="blog-post-title"><%= @post.title %></h2>
+	<small>
+		<span>Written by:</span>
+		<label class="blog-post-autor">
+			<a href="/author/<%= @post.author %>"><%= @post.author %></a> </label> <br>
+		</small>
+
+		<h6>
+		<% @post.tag_list.each do |tag| %>
+		<b><a href="/tags/<%= tag%>"><%= tag%></a></b>
 		<% end %>
-	</ul>
-	<p><%= @post.description%></p>
-	<% end %>
-	
-</div><!-- /.blog-post -->
+	</h6>
+		<p><%= @post.description%></p>
+		<% end %>
+
+	</div><!-- /.blog-post -->
