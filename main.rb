@@ -36,11 +36,26 @@ _posts['posts'].each do |post|
 	p.short_description = post['description'].split[1..10].join(" ")
 	p.tag_list = post['tags'].split(",")
 	p.save
+def Get_Tags
+	tags = {}
+	Posts.all.each do |p|
 
+		p.tags.each do |t|
+
+			if tags.has_key? t.name then
+				tags[t.name]+=1
+			else
+				tags[t.name]=1
+			end
+		end
+	end
+	tags = Hash[tags.sort_by {|_key, value| value}.reverse]
+	set :taglist, tags
 end
 
-get '/' do
+Get_Tags()
 
+get '/' do
 	@posts = Posts.all 
 	erb :index
 end
