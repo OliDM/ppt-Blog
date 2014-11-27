@@ -62,11 +62,13 @@
             </ol>-->
           </div> 
           <div class="sidebar-module">
-            <h4>Elsewhere</h4>
+            <h4>Popular tags<small>(all of them are)</small></h4>
             <ol class="list-unstyled">
-              <li><a href="#">GitHub</a></li>
-              <li><a href="#">Twitter</a></li>
-              <li><a href="#">Facebook</a></li>
+              <%   settings.taglist.each do|key, value|  %>
+              <li>
+                <a href="/tags/<%= key %>"> <%= key %>(<%= value  %>)</a>
+              </li>
+              <% end %>
             </ol>
           </div>
         </div><!-- /.blog-sidebar -->
