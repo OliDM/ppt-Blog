@@ -24,4 +24,11 @@ describe "My Sinatra Application" do
     expect(last_response.ok?).to eq(true)
   end
 
+   it "accesing the about route" do
+    get '/about'
+    expect(last_response.ok?).to eq(true)
+  end
+
+  
+
 end
