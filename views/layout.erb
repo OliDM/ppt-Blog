@@ -1,63 +1,42 @@
 <html lang="en" class=""><head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>ptt Blog</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap core CSS -->
+<link href="/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template -->
-    <link href="/styles.css" rel="stylesheet">
-  </head>
+<!-- Custom styles for this template -->
+<link href="/styles.css" rel="stylesheet">
+</head>
 
-  <body>
+<body>
 
-    <div class="blog-masthead">
-      <div class="container">
-        <nav class="blog-nav">
-          <a class="blog-nav-item active" href="/">Home</a>
-          <a class="blog-nav-item" href="/about">About</a>
-        </nav>
-      </div>
+  <div class="blog-masthead">
+    <div class="container">
+      <nav class="blog-nav">
+        <a class="blog-nav-item active" href="/">Home</a>
+        <a class="blog-nav-item" href="/about">About</a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="container">
+
+    <div class="blog-header">
+  <div class="blog-title">awesome witty title</div>
+
     </div>
 
-    <div class="container">
+    <div class="row">
+      <div class="col-sm-8 blog-main">
 
-      <div class="blog-header">
+        <%= yield %>
+      </div><!-- /.blog-main -->
 
-      </div>
-
-      <div class="row">
-
-        <div class="col-sm-8 blog-main">
-          
-          <%= yield %>
-        </div><!-- /.blog-main -->
-
-        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
-          <!-- <div class="sidebar-module sidebar-module-inset">
-            <h4>About</h4>
-            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
-          </div> -->
-          <div class="sidebar-module">
-           <!--  <h4>Archives</h4>
-            <ol class="list-unstyled">
-              <li><a href="#">March 2014</a></li>
-              <li><a href="#">February 2014</a></li>
-              <li><a href="#">January 2014</a></li>
-              <li><a href="#">December 2013</a></li>
-              <li><a href="#">November 2013</a></li>
-              <li><a href="#">October 2013</a></li>
-              <li><a href="#">September 2013</a></li>
-              <li><a href="#">August 2013</a></li>
-              <li><a href="#">July 2013</a></li>
-              <li><a href="#">June 2013</a></li>
-              <li><a href="#">May 2013</a></li>
-              <li><a href="#">April 2013</a></li>
-            </ol>-->
-          </div> 
+      <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
           <div class="sidebar-module">
             <h4>Popular tags<small>(all of them are)</small></h4>
             <ol class="list-unstyled">
@@ -75,8 +54,6 @@
     </div><!-- /.container -->
 
     <footer class="blog-footer">
-      <p>Blog template built for <a href="http://getbootstrap.com">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-      <p>
         <a href="#">Back to top</a>
       </p>
     </footer>
@@ -87,5 +64,5 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="/jquery/dist/jquery.min.js"></script>
     <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
-</body>
-</html>
+  </body>
+  </html>
