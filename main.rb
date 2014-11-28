@@ -58,7 +58,7 @@ end
 Get_Tags()
 
 get '/' do
-	@posts = Posts.all 
+	@posts = Posts.all(:order => [ :id.desc ])
 	erb :index
 end
 
@@ -74,14 +74,14 @@ get '/author/:id' do |id|
 
 	@author = id
 	@title = "The author you searched for is '#{@autor}'"
-	@posts = Posts.all(:author => @author)
+	@posts = Posts.all(:author => @author, :order => [ :id.desc ])
 	erb :autor
 end
 
 get '/tags/:id' do |id|
 
 	@title = "The tag you searched for is '#{id}'"
-	@posts = Posts.tagged_with(id)
+	@posts = Posts.tagged_with(id, :order => [ :id.desc ])
 	erb :tags
 end
 
