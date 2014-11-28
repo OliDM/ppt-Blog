@@ -20,6 +20,28 @@
     "tags": "fitness",
     "description": "Praesent in dolor nec sem rhoncus tincidunt nec egestas est.",
     "author": "Pixelated"
+    },
+     {
+    "id": "4",
+    "title": "First steps",
+    "tags": "sinatra, ruby",
+    "description": "<p>And so begins the journey of a wannabe Rubyist, first of all i want to say kudos to the people at tut+ for making <a href=\"http://code.tutsplus.com/series/singing-with-sinatra--net-19113\">this</a> tutorial series available for free which provided a good introduction into this dsl.</p><p>They included really nice tips like using a gem (called <b>shotgun</b> which didn't work for me but <b>restart</b> did the trick) to restart the server on each change made to the source so that i wouldn't have to go through the cumbersome process of restarting the server on every change. They covered topics like making views, routes and passing parameters to views.</p><p>well thats it for entry number 1 stay tuned.</p>",
+    "author": "Oliver R.R."
+    },
+    {
+    "id": "5",
+    "title": "Captain's log entry #2",
+    "tags": "tagging, headache",
+    "description": "<p>Time for more tinkering, after getting the routes and the views done(at least the front end), came the time to put some logic into them. Getting a list of posts filtered by author or by ID was a no brainer after looking at the docs for datamapper, yet the tags was more complicated because i either couldn't figure out how to use the gems correctly on the model or they came made for a specific ORM. It was then that i stumbled upon dm-taggings which solved most of my needs and was made for datamapper.</p>",
+    "author": "Oliver R.R."
+    },
+    {
+    "id": "6",
+    "title": "Ctags rule",
+    "tags": "tagging, revelations, moon runes",
+    "description": "<p>cant believe i hadn't seen this before, <b><a href=\"http://ctags.sourceforge.net/\">CTAGS!!!</a></b> togather with the sublime CTags package are a really powerfull combo, imagine being able to go to the definition of any simbol(defined in any of the supported languages) inside or outside of your proyect with just one simple shortcut, this made navigation through the proyect code and gem methods really smooth, the only personal downside was that it actually raised more questions once i got to see what was going on inside some of the gems, because from my point of view they were close to moon runes whenever i ran across a language feature i havent seen before, which actually happened quite often.</p> ",
+    "author": "Oliver R.R."
     }
   ]
 }
+
